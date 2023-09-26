@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Socket : MonoBehaviour
 {
-    [SerializeField] private bool Fullness;
-    [SerializeField] private GameObject MovementPos;
+    public bool Fullness;
+    public GameObject MovementPos;
     
 }

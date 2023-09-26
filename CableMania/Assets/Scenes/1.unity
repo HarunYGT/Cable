@@ -2011,6 +2011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f73056514f93b4ebd48f3a8defd06e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMove: 0
 --- !u!4 &559840162
 Transform:
   m_ObjectHideFlags: 0
@@ -4631,8 +4632,8 @@ GameObject:
   - component: {fileID: 1232483204}
   - component: {fileID: 1232483208}
   m_Layer: 0
-  m_Name: Yellow_Plug
-  m_TagString: BluePlug
+  m_Name: L-Yellow_Plug
+  m_TagString: YellowPlug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4747,7 +4748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12fcda7d7d233f4bbc159c5cfbb696c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentSocket: {fileID: 0}
+  presentSocket: {fileID: 1088689931}
   socketColor: YellowPlugSlot
   gameManager: {fileID: 559840161}
 --- !u!1 &1359310731
@@ -6659,7 +6660,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c05e52a8df735c4c91504fcee272a3e, type: 2}
+  - {fileID: 2100000, guid: 868183565fea6644b976b43335b52a9d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6787,7 +6788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1838633279
 Transform:
   m_ObjectHideFlags: 0
@@ -7774,7 +7775,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fd482a865bb669644be85227e90c644a, type: 2}
+  - {fileID: 2100000, guid: 868183565fea6644b976b43335b52a9d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8550,7 +8551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12fcda7d7d233f4bbc159c5cfbb696c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentSocket: {fileID: 0}
+  presentSocket: {fileID: 8997392634099598547}
   socketColor: BluePlugSlot
   gameManager: {fileID: 559840161}
 --- !u!1 &8997392634099598547
@@ -8598,5 +8599,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839d140737007a941b4251e8fc18e4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fullness: 0
+  Fullness: 1
   MovementPos: {fileID: 398112675}
