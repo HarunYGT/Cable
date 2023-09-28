@@ -7,6 +7,8 @@ TagManager:
   - Socket
   - BluePlug
   - YellowPlug
+  - Cable
+  - RedPlug
   layers:
   - Default
   - TransparentFX

@@ -5,23 +5,31 @@ using UnityEngine;
 public class LastPlug : MonoBehaviour
 {
     public GameObject presentSocket; 
-    [SerializeField] private string socketColor;
+    public string socketColor;
     [SerializeField] private GameManager gameManager; 
 
     bool PosChange,Choosed,SocketSit;
     GameObject MovementPos;
     GameObject SocketHimself;
 
-    public void ChoosePos(GameObject ObjectToGo,GameObject Socket)
+    public void Move(string operation, GameObject Socket, GameObject ObjectToGo =null)
     {
-        MovementPos = ObjectToGo;
-        Choosed = true;
-    }
-    public void ChangePos(GameObject ObjectToGo,GameObject Socket)
-    {
-        SocketHimself = Socket;
-        MovementPos = ObjectToGo;
-        PosChange = true;
+        switch(operation)
+        {
+            case "ChoosePos":
+                MovementPos = ObjectToGo;
+                Choosed = true;
+                break;
+            case "ChangePos":
+                SocketHimself = Socket;
+                MovementPos = ObjectToGo;
+                PosChange = true;
+                break;
+            case "ReturnSocket":
+                SocketHimself = Socket;
+                SocketSit = true;
+                break;
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -37,7 +45,7 @@ public class LastPlug : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position,MovementPos.transform.position,.040f);
             if(Vector3.Distance(transform.position,MovementPos.transform.position) < 0.10f)
             {
-                Choosed = false; 
+                Choosed = false;
             }
         }
         if(PosChange)
@@ -57,7 +65,7 @@ public class LastPlug : MonoBehaviour
                 SocketSit = false;
                 gameManager.isMove = false;
                 presentSocket = SocketHimself;
-                //Will do.
+                gameManager.CheckPlug();
             }
         }
     }
